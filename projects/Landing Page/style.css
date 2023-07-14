@@ -1,0 +1,180 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #3882F6;
+  color: #F9FAF8;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 30px;
+  border: 0;
+  border-radius: 7px;
+}
+
+.first, .footer {
+  background-color: #1F2937;
+  color: #F9FAF8;
+}
+
+.first {
+  color: #F9FAF8;
+  padding: 0 200px 100px 200px;
+}
+
+.first p, .first a {
+  color: #E5E7EB;
+}
+
+.first > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first .nav p {
+  color: #F9FAF8;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.first .nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.first a {
+  font-size: 18px;
+}
+
+.first h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 1000;
+  width: fit-content;
+}
+
+.first .container {
+  margin-top: 100px;
+  gap: 80px;
+  flex: 1 1 0;
+}
+
+.first .container .text {
+  width: 100%;
+}
+
+.first .container .text p {
+  width: 75%;
+}
+
+.first .container .image {
+  width: 100%;
+  height: 100%;
+}
+
+.first .container .image img {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.second {
+  margin: 60px 240px 100px 240px;
+  text-align: center;
+}
+
+.second .header {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.second .images-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.second .image {
+  flex-basis: 20%;
+}
+
+.second .image img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #3882F6;
+  border-radius: 10px;
+}
+
+.third {
+  background-color: #E5E7EB;
+  padding: 120px 240px;
+}
+
+.third h2 {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.third p {
+  margin: 0 0 0 auto;
+  width: max-content;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.fourth {
+  color: #E5E7EB;
+  background-color: #3882F6;
+  width: max-content;
+  margin: 80px auto;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+}
+
+.fourth p {
+  margin: 0;
+}
+
+.fourth p:first-child {
+  color: #F9FAF8;
+  font-weight: 900;
+  font-size: 120%;
+}
+
+.fourth button {
+  border: 2px solid #F9FAF8;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 80px;
+}
