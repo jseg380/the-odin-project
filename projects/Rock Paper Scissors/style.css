@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 10vh 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aliceblue;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+#info {
+  width: 700px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#scores {
+  width: 98%;
+  margin: 0;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+#scores > p {
+  margin: 5px 0;
+  font-size: 2ch;
+}
+
+#scores span {
+  display: inline-block;
+  text-align: right;
+  width: 2ch;
+}
+
+#reset {
+  padding: 2px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #f08080;
+}
+
+#reset > img {
+  display: block;
+  height: 4ch;
+  transition: all 0.5s ease;
+}
+
+#reset > img:hover {
+  transform: rotate(1turn);
+}
+
+#result {
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  font-size: 3ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main button {
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  border: 0;
+  background-color: #bde0ff;
+  transition: all 0.3s ease;
+}
+
+.main button:hover {
+  background-color: #a4d4ff;
+  font-weight: bolder;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #004a60;
+}
+
+button.disabledButton:hover {
+  background-color: #bde0ff;
+  font-weight: normal;
+  transform: none;
+  box-shadow: none;
+}
