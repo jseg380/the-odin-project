@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  min-width: 850px;
+  height: 100vh;
+}
+
+body {
+  padding: 8vh 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f1f1f1;
+}
+
+#input {
+  width: 20%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#mode {
+  border-radius: 5px;
+  border: 0;
+  padding: 3px;
+  background-color: #9dceff;
+}
+
+#size-slider {
+  appearance: none;
+  background: #d3d3d3;
+  border-radius: 5px;
+  outline: none;
+}
+
+#size-show {
+  width: 2ch;
+  text-align: right;
+}
+
+#size-button {
+  padding: 3px 12px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #9dceff;
+}
+
+#size-button:hover {
+  box-shadow: 0px 0px 5px darkgrey;
+  background-color: #62b0ff;
+  cursor: pointer;
+}
+
+#reset-button {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid #ff7070;
+  margin-top: auto;
+  background-color: #ff7070;
+  color:white;
+}
+
+#reset-button:hover {
+  box-shadow: 0px 0px 5px darkgrey;
+  background-color: #ff7070;
+  cursor: pointer;
+  color: black;
+}
+
+#reset-button > svg {
+  display: block;
+}
+
+#container {
+  aspect-ratio: 1 / 1;
+  height: 80vh;
+  display: grid;
+}
+
+.grid-element {
+  justify-self: stretch;
+  align-self: stretch;
+}
