@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign-up form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="normalize.css" href="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="image">
+      <div id="logo">
+        <img src="img/odin-lined.png" alt="The Odin Project Logo">
+        <p>ODIN</p>
+      </div>
+      <div id="credit">
+        Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="text">
+        <p>This is not a real online service! You know you need something like 
+          this in your life to help you realize your deepest dreams. <br>Sign 
+          up <i>now</i> to get started.</p>
+        <p>You <i>know</i> you want to.</p>
+      </div>
+      <div id="form-part">
+        <form id="sign-up">
+          <fieldset>
+            <legend>Let's do this!</legend>
+            <div class="field">
+              <label for="first-name">First Name</label>
+              <input type="text" name="first-name" id="first-name" spellcheck="false" required>
+            </div>
+            <div class="field">
+              <label for="last-name">Last Name</label>
+              <input type="text" name="last-name" id="last-name" spellcheck="false" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" spellcheck="false" required>
+            </div>
+            <div class="field">
+              <label for="phone-number">Phone Number</label>
+              <input type="tel" name="phone-number" id="phone-number" spellcheck="false" required>
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" spellcheck="false" required>
+              <span id="error-message">* Passwords do not match</span>
+            </div>
+            <div class="field">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" name="confirm-password" id="confirm-password" spellcheck="false" required>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div id="confirm">
+        <button type="submit" form="sign-up">Create Account</button>
+        <p>Already have an account? <a href="">Log in</a></p>
+      </div>
+    </div>
+
+    <script>
+      const pass1 = document.querySelector('#password');
+      const pass2 = document.querySelector('#confirm-password');
+      const msg = document.querySelector('#error-message');
+
+      window.addEventListener('load', checkPass);
+      [pass1, pass2].forEach((el) => el.addEventListener('input', checkPass));
+
+      function checkPass() {
+        if (pass1.value !== pass2.value || pass1.value === '') {
+          pass1.classList.add('error');
+          pass2.classList.add('error');
+          msg.style.visibility = 'visible';
+        }
+        else {
+          pass1.classList.remove('error');
+          pass2.classList.remove('error');
+          msg.style.visibility = 'hidden';
+        }
+      }
+    </script>
+  </body>
+</html>
