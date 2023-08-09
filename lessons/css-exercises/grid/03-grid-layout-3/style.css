@@ -3,8 +3,17 @@
   padding: 0;
 }
 
+ul {
+
+  list-style-type: none;
+}
+
 .container {
   text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,6 +26,23 @@
 
 .header {
   background-color: #393f4d;
+
+  grid-area: 1 / 1 / 2 / -1;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  /*grid-template-columns: 1fr 2fr;*/
+  align-items: center;
+}
+
+.logo {
+
+  justify-self: start;
+}
+
+.menu ul {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu ul,
@@ -26,6 +52,16 @@
 
 .sidebar {
   background-color: #C50208;
+
+  grid-area: 2 / 1 / 4 / 2;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.sidebar > div {
+  padding: 30px;
 }
 
 .sidebar .photo {
@@ -46,6 +82,14 @@
 
 .nav {
   background-color: #C50208;
+
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.nav ul {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
@@ -55,6 +99,11 @@
 
 .article {
   background-color: #bccbde;
+
+  grid-area: 3 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .article p {
@@ -70,6 +119,11 @@
   text-align: center;
 }
 
+.card {
+
+  height: 200px;
+}
+
 .card p {
   color: black;
   font-weight: normal;
@@ -83,6 +137,8 @@
 
 .footer {
   background-color: #393f4d;
+
+  grid-area: 4 / 1 / span 1 / -1;
 }
 
 .footer p {
