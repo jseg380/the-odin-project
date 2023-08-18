@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F9F9;
+  min-width: 350px;
+  min-height: 100vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  transition: all 50ms linear;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#board {
+  width: clamp(100px, 100%, 400px);
+  height: fit-content;
+  background-color: #DEF0F9;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+#info {
+  margin-bottom: 1rem;
+}
+
+#info div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#player span, #opponent span {
+  display: inline-block;
+  width: 2ch;
+  text-align: right;
+}
+
+#info > *:nth-child(2) {
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#info div button {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  background-color: #f5c8e6;
+  border: unset;
+  outline: unset;
+  padding: 3px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+#info div button:hover {
+  box-shadow: 1px 1px 2px lightgray;
+}
+
+#info div button:active {
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+#info div button svg {
+  vertical-align: middle;
+}
+
+#reset svg {
+  transition: all 600ms ease-in-out;
+}
+
+#reset svg:hover {
+  transform: rotate(-1turn);
+}
+
+#game {
+  --border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: black;
+  border-radius: calc(var(--border-radius) + 1px);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.space {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+.space:hover {
+  cursor: pointer;
+}
+
+.occupied:hover {
+  cursor: not-allowed;
+}
+
+.new-round:hover {
+  cursor: cell;
+}
+
+.space:nth-child(1) {border-radius: var(--border-radius) 0 0 0;}
+
+.space:nth-child(3) {border-radius: 0 var(--border-radius) 0 0;}
+
+.space.space:nth-last-child(3) {border-radius: 0 0 0 var(--border-radius);}
+
+.space.space:nth-last-child(1) {border-radius: 0 0 var(--border-radius) 0;}
+
+.disabled {
+  display: none;
+}
+
+dialog {
+  width: 300px;
+  box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3);
+  color: black;
+  font-weight: bold;
+  border: unset;
+  outline: unset;
+  border-radius: 20px;
+  padding: 3rem 3rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+dialog input {
+  border: 2px solid #848484;
+  outline: unset;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+
+dialog input:focus {
+  border: 2px solid #87c9e9;
+}
+
+dialog > form > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+dialog > form > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+dialog > form > div > div > label {
+  font-size: 30px;
+}
+
+dialog button {
+  align-self: end;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: unset;
+  outline: unset;
+  background-color: #dcf1b2;
+  font-weight: bolder;
+}
+
+dialog button:hover {
+  box-shadow: 1px 1px 2px lightgray;
+}
+
+dialog button:active {
+  box-shadow: 1px 1px 1px lightgray;
+}
