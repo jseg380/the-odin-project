@@ -1,20 +1,23 @@
 const libraryElement = document.querySelector('#library');
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = Boolean(read);
-}
 
-Book.prototype.info = function() {
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'already read' : 'not read yet'}`;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = Boolean(read);
+  }
+
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'already read' : 'not read yet'}`;
+  }
+
+  toggleRead() {
+    this.read = !this.read;
+  }
 };
-
-Book.prototype.toggleRead = function() {
-  this.read = !this.read;
-}
 
 
 function addBookToLibrary(form) {
