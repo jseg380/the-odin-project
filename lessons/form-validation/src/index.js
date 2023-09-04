@@ -19,9 +19,6 @@ let validMap = new Map(inputs.map((input) => [input.id, false]));
 const isFormValid = function() {
   const invalidInputs = Array.from(validMap.values()).filter((valid) => !valid);
 
-  console.log(validMap);
-  if (validMap.size > 5) console.log('\n\nIT HAPPENED NOW\n\n');
-  console.log('In isFormValid, invalidInputs', invalidInputs);
   // The form is valid if there are no invalid inputs
   return invalidInputs.length === 0;
 };
